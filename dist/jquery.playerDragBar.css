@@ -1,0 +1,132 @@
+/* 时间刻度样式开始 */
+
+.playerDragBar {
+    position      : relative;
+    width         : calc(100% - 120px);
+    height        : 65px;
+    margin        : 0 auto;
+    overflow      : hidden;
+    pointer-events: none;
+}
+
+.playerDragBar ul,
+.playerDragBar li,
+.playerDragBar div {
+    margin : 0;
+    padding: 0;
+}
+
+.playerDragBar li {
+    list-style: none;
+}
+
+.playerDragBar .centerTime {
+    position : absolute;
+    top      : 6px;
+    left     : 50%;
+    transform: translate(-50%);
+    color    : #fff;
+    z-index  : 2;
+    font-size: 14px;
+}
+
+.playerDragBar .centerTimeLine {
+    position  : absolute;
+    top       : 26px;
+    left      : 50%;
+    transform : translate(-50%);
+    background: #fff;
+    width     : 1px;
+    height    : 35px;
+    z-index   : 2;
+}
+
+.playerDragBar .timeScaleOuter {
+    width        : 100%;
+    height       : 19px;
+    border-radius: 9px;
+    background   : #fff;
+    margin-top   : 39px;
+    position     : relative;
+}
+
+.playerDragBar .timeScaleInner {
+    width        : 100%;
+    height       : 18px;
+    border-radius: 9px;
+    background   : #0089FF;
+}
+
+.playerDragBar .moveObj {
+    width         : 100%;
+    border-radius : 9px;
+    position      : absolute;
+    left          : 0;
+    top           : 40px;
+    cursor        : grab;
+    cursor        : pointer;
+    font-size     : 14px;
+    color         : #fff;
+    pointer-events: auto;
+}
+
+.playerDragBar .moveObj>li {
+    position      : relative;
+    height        : 20px;
+    float         : left;
+    pointer-events: none;
+}
+
+.playerDragBar .moveObj>li>span {
+    position       : absolute;
+    top            : -20px;
+    right          : 0px;
+    transform      : translate(50%);
+    user-select    : none;
+    -ms-user-select: none;
+    color          : #fff;
+}
+
+.playerDragBar .moveObj>li>.slotLine {
+    position  : absolute;
+    top       : 0px;
+    left      : 0px;
+    /* display: flex; */
+}
+
+.playerDragBar .moveObj>li>.slotLine>i {
+    position  : absolute;
+    top       : 12px;
+    left      : 0px;
+    transform : translate(-50%);
+    width     : 1px;
+    height    : 6px;
+    background: #fff;
+}
+
+.playerDragBar .moveObj>li>.slotLine>i:last-child {
+    height: 12px;
+    top   : 5px;
+}
+
+.playerDragBar .startTimeShadow {
+    position                 : absolute;
+    left                     : 0px;
+    right                    : 0px;
+    top                      : 39px;
+    background               : rgba(0, 0, 0, 0.5);
+    height                   : 18px;
+    border-bottom-left-radius: 9px;
+    border-top-left-radius   : 9px;
+}
+
+.playerDragBar .endTimeShadow {
+    position                  : absolute;
+    left                      : 0px;
+    right                     : 0px;
+    top                       : 39px;
+    background                : rgba(0, 0, 0, 0.5);
+    height                    : 18px;
+    border-bottom-right-radius: 9px;
+    border-top-right-radius   : 9px;
+}

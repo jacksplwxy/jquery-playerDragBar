@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../dist/jquery.playerDragBar.css">
+    <title>Document</title>
+</head>
+
+<body style="background:#ccc">
+    <div class="player-bar"></div>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+    <script src="./otherPlayerDragBar.js"></script>
+    <script src="../../dist/jquery.playerDragBar.js"></script>
+    <script>
+        $('.player-bar').playerDragBar.noConflict('myPlayerDragBar')
+        $('.player-bar').playerDragBar('resize')
+        $('.player-bar').myPlayerDragBar('resize')
+    </script>
+</body>
+
+</html>

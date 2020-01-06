@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../dist/jquery.playerDragBar.css">
+    <title>Document</title>
+</head>
+
+<body style="background:#ccc">
+    <div class="player-bar"></div>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+    <script src="../dist/jquery.playerDragBar.js"></script>
+    <script>
+        //设置初始化参数
+        $('.player-bar').playerDragBar({
+            timeSlot: 1,
+            currentTime: new Date().getTime(),
+            startTime: new Date().getTime() - 10 * 60 * 1000,
+            endTime: new Date().getTime() + 10 * 60 * 1000,
+            slotNumber: 10,
+            dragstart: function () {
+                console.log('开始拖拽')
+            }
+        })
+        //绑定事件回调
+        $('.player-bar').on('dragend', function (e, time) {
+            console.log('拖拽结束', e, time)
+        })
+        //调用实例方法
+        var timer = setInterval(function () {
+            $('.player-bar').playerDragBar('updateCenterTime', new Date().getTime())
+        }, 1000)
+    </script>
+</body>
+
+</html>

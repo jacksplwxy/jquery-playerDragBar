@@ -70,3 +70,6 @@ $('.player-bar').on('dragend', function (e, time) {
 
 ## 插件冲突：noConflict
 $('.player-bar').playerDragBar.noConflict('myPlayerDragBar')
+
+## 插件截图：
+<img src="readme/1.gif"  height="400" width="550">
